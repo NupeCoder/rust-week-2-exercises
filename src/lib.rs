@@ -120,3 +120,5 @@ pub fn consume_utxo(utxo: UTXO) -> UTXO {
     // TODO: Implement UTXO consumption logic (if any)
     todo!()
 }
+
+// checkpoint
