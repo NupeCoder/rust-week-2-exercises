@@ -123,5 +123,4 @@ pub fn consume_utxo(utxo: UTXO) -> UTXO {
         vout: utxo.vout,
         value: utxo.value,
     }
-
 }
