@@ -52,7 +52,7 @@ pub fn classify_script(script: &[u8]) -> ScriptType {
     match script {
         [0x76, 0xa9, 0x14, ..] => ScriptType::P2PKH,
         [0x00, 0x14, ..] => ScriptType::P2WPKH,
-        _=> ScriptType::Unknown,
+        _ => ScriptType::Unknown,
     }
 }
 
@@ -103,7 +103,7 @@ impl Opcode {
         match byte {
             0xac => Ok(Self::OpChecksig),
             0x76 => Ok(Self::OpDup),
-            _=> Err(format!("Invalid opcode: 0x{:02x}", byte)),
+            _ => Err(format!("Invalid opcode: 0x{:02x}", byte)),
         }
     }
 }
