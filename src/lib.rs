@@ -118,7 +118,10 @@ pub struct UTXO {
 
 pub fn consume_utxo(utxo: UTXO) -> UTXO {
     // TODO: Implement UTXO consumption logic (if any)
-    todo!()
-}
+    UTXO {
+        txid: utxo.txid,
+        vout: utxo.vout,
+        value: utxo.value,
+    }
 
-// checkpoint
+}
