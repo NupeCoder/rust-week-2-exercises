@@ -37,7 +37,7 @@ pub fn parse_satoshis(input: &str) -> Result<u64, String> {
 
     match parsed_result {
         Ok(amount) => Ok(amount),
-        Err(_) => Err("Invalid satoshi amount".to_string())
+        Err(_) => Err("Invalid satoshi amount".to_string()),
     }
 }
 
@@ -52,7 +52,7 @@ pub fn classify_script(script: &[u8]) -> ScriptType {
     match script {
         [0x76, 0xa9, 0x14, ..] => ScriptType::P2PKH,
         [0x00, 0x14, ..] => ScriptType::P2WPKH,
-        _=> ScriptType::Unknown
+        _=> ScriptType::Unknown,
     }
 }
 
@@ -103,7 +103,7 @@ impl Opcode {
         match byte {
             0xac => Ok(Self::OpChecksig),
             0x76 => Ok(Self::OpDup),
-            _=> Err(format!("Invalid opcode: 0x{:02x}", byte))
+            _=> Err(format!("Invalid opcode: 0x{:02x}", byte)),
         }
     }
 }
